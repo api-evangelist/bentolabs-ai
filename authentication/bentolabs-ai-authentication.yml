@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bentolabs.ai/python/installation + https://docs.bentolabs.ai/python/configuration
+docs: https://docs.bentolabs.ai/quickstart
+summary:
+  types: [apiKey]
+  api_key_in: [env, header]
+  oauth2_flows: []
+schemes:
+- name: BentoLabsApiKey
+  type: apiKey
+  description: >-
+    Publishable ingest API key used by the SDK/exporter to ship OpenTelemetry
+    traces to the BentoLabs ingest API. Keys begin with the `bl_pk_` prefix and
+    the SDK validates the prefix locally before any network request.
+  key_prefix: bl_pk_
+  env_var: BENTOLABS_API_KEY
+  init: bento.init(api_key="bl_pk_...")
+  sources: [docs]
+- name: BentoLabsUserAuth
+  type: interactive
+  description: >-
+    The `bentolabs` CLI authenticates the human user via `bentolabs auth login`
+    (personal credentials, full dashboard parity) rather than an API key. API
+    keys are managed per workspace (see `bentolabs api-keys`).
+  sources: [docs]
+notes: >-
+  No published product OpenAPI was found (the docs `api-reference/openapi.json`
+  is the Mintlify Plant Store placeholder), so schemes are captured from the
+  documentation rather than derived from a spec.
