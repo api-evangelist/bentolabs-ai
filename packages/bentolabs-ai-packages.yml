@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://pypi.org/user/bentoppian/ + https://docs.bentolabs.ai
+packages:
+- language: python
+  registry: pypi
+  name: bentolabs-sdk
+  url: https://pypi.org/project/bentolabs-sdk/
+  version: 0.2.1
+  install: pip install bentolabs-sdk
+  description: Official BentoLabs Python SDK. Drop-in OpenTelemetry span processor that ships traces to the BentoLabs ingest API over OTLP/HTTP+JSON.
+  extras:
+  - install: pip install "bentolabs-sdk[adk]"
+    description: Google ADK one-line auto-instrumentation.
+  official: true
+- language: python
+  registry: pypi
+  name: bentolabs-cli
+  url: https://pypi.org/project/bentolabs-cli/
+  version: 0.1.2
+  install: uv tool install bentolabs-cli
+  description: Command-line interface for the Bentolabs platform API (binary is `bentolabs`).
+  official: true
+notes:
+  typescript: TypeScript SDK is documented as "coming soon"; today TypeScript apps send traces via direct OTLP export, not a dedicated package.

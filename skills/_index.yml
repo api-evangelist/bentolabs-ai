@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/BentoLabs-ai/skills
+install: npx skills add BentoLabs-ai/skills
+note: >-
+  Provider-published Agent Skills, captured verbatim from the official
+  BentoLabs-ai/skills repository. Installable across Claude Code, Cursor, Codex,
+  OpenCode, and Windsurf.
+skills:
+- file: bentolabs-cli-SKILL.md
+  name: bentolabs-cli
+  description: Drives the bentolabs-cli command-line client for Bento — traces, trajectories, signals, issues, clusters, analytics, and any Bento REST endpoint via `bentolabs raw`.
+  version: '4.1'
+- file: bentolabs-integrate-SKILL.md
+  name: bentolabs-integrate
+  description: Greenfield-integrate Bento into an app with no existing AI observability SDK via direct OTLP export, Google ADK auto-instrument, or manual bento.track_ai.
+  version: '3.1'
+- file: bentolabs-migrate-SKILL.md
+  name: bentolabs-migrate
+  description: Migrate an existing AI observability/agent stack (Raindrop, Langfuse, Mastra, OpenAI Agents SDK, LangChain, LlamaIndex, Vercel AI SDK, CrewAI, Pydantic AI) to Bento.
+  version: '2.0'

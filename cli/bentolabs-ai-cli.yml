@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bentolabs.ai/cli/overview + https://docs.bentolabs.ai/cli/commands
+docs: https://docs.bentolabs.ai/cli/installation
+name: bentolabs
+package: bentolabs-cli
+install:
+- uv tool install bentolabs-cli
+auth:
+  login: bentolabs auth login
+  note: Signs in as the user with personal credentials (full dashboard parity), not an API key.
+refresh: bentolabs refresh
+help: bentolabs <group> <command> --help
+notes: >-
+  The command tree is generated dynamically from the Bento API; `--help` is the
+  authoritative signature and new endpoints appear after `bentolabs refresh`.
+  Output supports pretty and raw/JSON modes for piping into jq/grep in scripts and CI.
+command_groups:
+- name: issues
+  description: Triage tracked problems; drill into trajectories, findings, and signals.
+- name: trajectories
+  description: Browse analyzed agent runs; filter by suspicious, win, or errored.
+- name: runs
+  description: Browse raw agent runs; totals and timelines.
+- name: traces
+  description: Access raw trace lists.
+- name: analytics
+  description: Performance and usage analytics.
+- name: clusters
+  description: Groupings of similar findings and signal events (scatter view).
+- name: findings
+  description: Observations Bento extracts from runs.
+- name: signals
+  description: Plain-English detectors; list, read what they fire on, train new ones.
+- name: deep-search
+  description: Train a new detector from labeled examples.
+- name: agent
+  description: Drive Bento's in-product AI agent from the terminal.
+- name: credentials
+  description: Manage integration credentials.
+- name: sync
+  description: Connect external trace sources (e.g. Langfuse) and check import health.
+- name: api-keys
+  description: Manage workspace API keys.
+- name: workspaces
+  description: List and select workspaces (`bentolabs workspaces use`).
+- name: notification-channels
+  description: Manage notification channels.
+- name: raw
+  description: Escape hatch to call any Bento REST endpoint / path directly.

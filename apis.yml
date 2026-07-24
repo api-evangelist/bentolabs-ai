@@ -1,7 +1,16 @@
 aid: bentolabs-ai
-name: Bentolabs Ai
-description: Bentolabs Ai is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Bentolabs AI
+description: >-
+  Bentolabs AI builds Bento, a self-learning production infrastructure platform
+  for AI agents. Bento ingests OpenTelemetry traces from agent applications and
+  turns them into readable trajectories, plain-English failure-mode detectors
+  (signals), alerts, clusters, evaluations, and versioned improvements — a
+  closed loop that monitors what runs, surfaces silent regressions and
+  behavioral drift, and compounds learnings back into the agent. It ships a
+  Python SDK, a command-line client, direct OTLP export from any
+  OpenTelemetry-speaking framework (LangChain, LlamaIndex, Mastra, Vercel AI
+  SDK, Google ADK), a hosted MCP server, and packaged Agent Skills for AI coding
+  tools. Y Combinator-backed.
 url: https://raw.githubusercontent.com/api-evangelist/bentolabs-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +18,77 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://bentolabs.ai/og/default.png
 tags:
 - Company
+- AI Agents
+- Observability
+- OpenTelemetry
+- Tracing
+- LLM Monitoring
+- Evaluation
+- Agent Infrastructure
+- Developer Tools
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/bentolabs-ai-domain-security.yml
+- type: Website
+  url: https://bentolabs.ai
+- type: DeveloperPortal
+  url: https://docs.bentolabs.ai
+- type: Documentation
+  url: https://docs.bentolabs.ai
+- type: GettingStarted
+  url: https://docs.bentolabs.ai/quickstart
+- type: Blog
+  url: https://bentolabs.ai/blog
+- type: GitHubOrganization
+  url: https://github.com/BentoLabs-ai
+- type: Login
+  url: https://platform.bentolabs.ai
+- type: TermsOfService
+  url: https://bentolabs.ai/terms
+- type: PrivacyPolicy
+  url: https://bentolabs.ai/privacy
+- type: Packages
+  url: packages/bentolabs-ai-packages.yml
+- type: SDKs
+  url: packages/bentolabs-ai-packages.yml
+- type: CLI
+  url: cli/bentolabs-ai-cli.yml
+- type: MCPServer
+  url: mcp/bentolabs-ai-mcp.yml
+- type: LLMsTxt
+  url: llms/bentolabs-ai-llms.txt
+- type: Authentication
+  url: authentication/bentolabs-ai-authentication.yml
+- type: Conventions
+  url: conventions/bentolabs-ai-conventions.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.bentolabs.ai/concepts/data-model + https://docs.bentolabs.ai/python/track-ai + https://docs.bentolabs.ai/otel-export
+docs: https://docs.bentolabs.ai
+authentication:
+  style: api-key
+  detail: Publishable ingest key `bl_pk_...` via BENTOLABS_API_KEY; see authentication/bentolabs-ai-authentication.yml
+ingest:
+  protocol: OTLP/HTTP+JSON
+  detail: >-
+    Bento is an OpenTelemetry collector. Traces arrive as OTLP over HTTP (JSON
+    encoding). Any framework that speaks OpenTelemetry can export directly
+    (Vercel AI SDK, Mastra, LangChain, LlamaIndex, Google ADK); the Python SDK
+    attaches a drop-in span processor.
+semantic_conventions:
+  standards: [OpenTelemetry gen_ai.*, OpenInference openinference.*]
+  detail: Bento understands standard GenAI/OpenInference span attributes and maps them to dashboard columns.
+data_model:
+  primitives: [trajectories, spans, attributes, sessions]
+  detail: A trajectory is one agent run (one dashboard row); spans form the OTel span tree; attributes are filterable dimensions; sessions/users are stitched from IDs passed in.
+identity:
+  required_track_ai_args: [user_id, convo_id, model, provider]
+  helpers: Late-bind user_id, session_id, and tags onto open spans, or scope per-task (see python/identity).
+  note: convo_id vs session_id is a documented footgun during migration.
+properties:
+  detail: Arbitrary custom dimensions pass through to span attributes with type fidelity.
+idempotency:
+  supported: unknown
+  detail: No idempotency-key contract is documented; ingest is trace telemetry (OTLP), not a mutating resource API.
+pagination:
+  detail: Not documented as a published contract; the CLI/API surface is generated dynamically from the Bento API.
+error_envelope:
+  detail: No published product OpenAPI or error-envelope reference was found (docs openapi.json is a Mintlify placeholder).
+cross_links:
+  authentication: authentication/bentolabs-ai-authentication.yml
+  cli: cli/bentolabs-ai-cli.yml
+  packages: packages/bentolabs-ai-packages.yml

@@ -1,0 +1,43 @@
+# Bento
+
+> Production infrastructure for AI agents. Monitor what runs. Improve what fails. Compound learnings.
+
+## Docs
+
+- [Commands](https://docs.bentolabs.ai/cli/commands.md): Command groups, built-ins, flags, and output modes.
+- [Installation](https://docs.bentolabs.ai/cli/installation.md): Install the Bento CLI, sign in, and run your first command.
+- [Overview](https://docs.bentolabs.ai/cli/overview.md): What the Bento CLI is, the product it drives, and how the pieces fit together.
+- [Agent](https://docs.bentolabs.ai/cli/resources/agent.md): Drive Bento's in-product AI agent from the terminal.
+- [Clusters](https://docs.bentolabs.ai/cli/resources/clusters.md): Groupings of similar findings and signal events, the scatter view.
+- [Deep Search](https://docs.bentolabs.ai/cli/resources/deep-search.md): Train a new detector from labeled examples.
+- [Findings](https://docs.bentolabs.ai/cli/resources/findings.md): The observations Bento extracts from your runs, and how to pull them.
+- [Issues](https://docs.bentolabs.ai/cli/resources/issues.md): Triage tracked problems and drill into the trajectories, findings, and signals behind them.
+- [Runs](https://docs.bentolabs.ai/cli/resources/runs.md): Browse raw agent runs and read totals and timelines over them.
+- [Workspace settings](https://docs.bentolabs.ai/cli/resources/settings.md): Workspaces, members, API keys, notification channels, and extraction config.
+- [Signals](https://docs.bentolabs.ai/cli/resources/signals.md): Detectors you describe in plain English: list them, read what they fire on, train new ones.
+- [Sources & sync](https://docs.bentolabs.ai/cli/resources/sources.md): Connect external trace sources like Langfuse and check import health.
+- [Trajectories](https://docs.bentolabs.ai/cli/resources/trajectories.md): Browse analyzed runs: filter by suspicious, win, or errored, and read their findings.
+- [Attributes](https://docs.bentolabs.ai/concepts/attributes.md): The dimensions every chart can filter, group, and break down by.
+- [Data model](https://docs.bentolabs.ai/concepts/data-model.md): Trajectories, spans, attributes, sessions. The four primitives that drive every chart in the dashboard.
+- [Sessions and users](https://docs.bentolabs.ai/concepts/sessions.md): How conversations and per-user views are stitched together from the IDs you pass.
+- [Trajectories](https://docs.bentolabs.ai/concepts/trajectories.md): One agent run, grouped into one row in the dashboard.
+- [Troubleshooting](https://docs.bentolabs.ai/concepts/troubleshooting.md): What to check when track_ai doesn't show up in the dashboard, or when fields look wrong.
+- [Introduction](https://docs.bentolabs.ai/index.md): Production infrastructure for AI agents. Monitor what runs. Improve what fails. Compound learnings.
+- [From Langfuse](https://docs.bentolabs.ai/migrations/langfuse.md): Mechanical translation from the Langfuse Python SDK to Bento.
+- [From Raindrop](https://docs.bentolabs.ai/migrations/raindrop.md): Mechanical translation from Raindrop (raindrop-ai) to Bento.
+- [Export from any framework](https://docs.bentolabs.ai/otel-export.md): Send traces to Bento from a framework that already speaks OpenTelemetry: Vercel AI SDK, Mastra, LangChain, LlamaIndex, and more.
+- [Configuration](https://docs.bentolabs.ai/python/configuration.md): Environment variables, init(), and credential rotation.
+- [Identity helpers](https://docs.bentolabs.ai/python/identity.md): Late-bind user_id, session_id, and tags onto open spans, or scope them per-task. Advanced.
+- [Installation](https://docs.bentolabs.ai/python/installation.md): Install the Bento Python SDK and send a test trace.
+- [Google ADK](https://docs.bentolabs.ai/python/integrations.md): Capture every model call, tool call, and agent step from a Google ADK app with one line.
+- [OTel transport](https://docs.bentolabs.ai/python/otel-transport.md): The lower-level surface. Wire Bento into an existing OpenTelemetry pipeline.
+- [Properties](https://docs.bentolabs.ai/python/properties.md): Pass arbitrary custom dimensions through to span attributes.
+- [Threading model](https://docs.bentolabs.ai/python/threading-model.md): How the SDK ships telemetry without blocking your hot path. ContextVar isolation, daemon worker, fork safety, async behavior.
+- [Tracking events](https://docs.bentolabs.ai/python/track-ai.md): Wrap any LLM or tool call with bento.track_ai. Manual events for SDKs without an integration.
+- [Trajectories](https://docs.bentolabs.ai/python/trajectories.md): Group multi-step work into a single trace. Advanced, most apps don't need this.
+- [Quickstart](https://docs.bentolabs.ai/quickstart.md): Install Bento, send your first trace, see it in the dashboard.
+- [TypeScript SDK](https://docs.bentolabs.ai/typescript/index.md): Send TypeScript traces to Bento today via direct export. The dedicated SDK is coming soon.
+
+## OpenAPI Specs
+
+- [openapi](https://docs.bentolabs.ai/api-reference/openapi.json)
