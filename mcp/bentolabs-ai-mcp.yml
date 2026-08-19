@@ -6,13 +6,15 @@ server:
   name: bentolabs
   transport: http
   url: https://docs.bentolabs.ai/mcp
-  description: >-
-    Hosted MCP server for the Bento documentation surface, advertised in the
-    Bento quickstart for per-tool MCP setup across AI coding tools (Claude,
-    Cursor, and others). Serves the documentation/knowledge surface rather than
-    the platform data API; the platform data API is driven agentically via the
-    packaged Agent Skills (see skills/_index.yml) and the `bentolabs` CLI.
-notes: >-
-  Bento also ships an in-product AI agent driven from the terminal via
-  `bentolabs agent`; that is not an MCP server. No stdio/npm MCP package was
-  found in the @modelcontextprotocol namespace for this provider.
+  description: Hosted MCP server for the Bento documentation surface, advertised in the Bento quickstart
+    for per-tool MCP setup across AI coding tools (Claude, Cursor, and others). Serves the documentation/knowledge
+    surface rather than the platform data API; the platform data API is driven agentically via the packaged
+    Agent Skills (see skills/_index.yml) and the `bentolabs` CLI.
+notes: Bento also ships an in-product AI agent driven from the terminal via `bentolabs agent`; that is
+  not an MCP server. No stdio/npm MCP package was found in the @modelcontextprotocol namespace for this
+  provider.
+deployment:
+  mode: remote
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
